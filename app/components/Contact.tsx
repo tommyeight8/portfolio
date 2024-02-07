@@ -2,6 +2,7 @@
 
 import ShootingStars from "./ShootingStars"
 import Image from "next/image"
+import Link from "next/link"
 
 import { FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa'
 
@@ -14,10 +15,10 @@ const Contact = () => {
     // </section>
     <section className='flex items-center justify-center h-screen w-full relative' id='contact'>
         <div className={`relative w-[300px] h-[400px] flex justify-center items-center
-            bg-transparent shadow-xl shadow-black/30 rounded-[20px] before:absolute before:w-[170px] before:h-[130%]
-            overflow-hidden before:bg-gradient-to-t from-[#ff2d75] to to-[#4fc3dc]
-            before:animate-[spin_15s_linear_infinite] after:absolute after:bg-slate-900
-            after:inset-[5px] after:rounded-[20px]`}>
+            bg-transparent shadow-xl shadow-black/30 rounded-xl before:absolute before:w-[170px] before:h-[130%]
+            overflow-hidden before:bg-gradient-to-t before:from-[#ff2d75] before:to-[#4fc3dc]
+            before:animate-[spin_15s_linear_infinite] after:absolute after:bg-[#161e2b]
+            after:inset-[2px] after:rounded-xl`}>
             <div className="z-20 w-full p-4">
                 <h2 className="text-lg uppercase mb-4 text-center text-gray-100">Contact Me</h2>
                 <form action="" className="flex flex-col text-sm items-center justify-center">
@@ -77,14 +78,17 @@ const Contact = () => {
                     </div>
 
                     <div className="flex gap-2 mt-4">
-                          <FaInstagram className="text-gray-200 text-2xl" />
-                          <FaLinkedin className="text-gray-200 text-2xl" />
-                          <FaTwitter className="text-gray-200 text-2xl" />
+                          <Link href='#'>
+                            <FaInstagram className="social-icons" />
+                          </Link>
+                          <Link href='#'>
+                            <FaLinkedin className="social-icons" />
+                          </Link>
+                          <Link href='#'>
+                            <FaTwitter className="social-icons" />
+                          </Link>
                     </div>
                 </form>
-            </div>
-            <div className="absolute bg-slate-300/10 backdrop-blur-sm z-10 inset-[5px] rounded-[17px]">
-
             </div>
         </div>
         <ShootingStars />
