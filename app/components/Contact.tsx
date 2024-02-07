@@ -3,6 +3,8 @@
 import ShootingStars from "./ShootingStars"
 import Image from "next/image"
 
+import { FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa'
+
 // after:bg-[url('/bg.jpg')] after:bg-cover after:bg-center after:bg-fixed 
 
 const Contact = () => {
@@ -70,7 +72,14 @@ const Contact = () => {
                         className="w-full text-gray-100 text-lg rounded-md relative
                         bg-gradient-to-r from-pink-500 to-indigo-500 
                         hover:-translate-y-1 hover:hover:shadow-lg transition duration-400 p-2 outline-none">
-                            Submit</button>
+                            Submit
+                        </button>
+                    </div>
+
+                    <div className="flex gap-2 mt-4">
+                          <FaInstagram className="text-gray-200 text-2xl" />
+                          <FaLinkedin className="text-gray-200 text-2xl" />
+                          <FaTwitter className="text-gray-200 text-2xl" />
                     </div>
                 </form>
             </div>
@@ -78,7 +87,6 @@ const Contact = () => {
 
             </div>
         </div>
-
         <ShootingStars />
     </section>
   )
