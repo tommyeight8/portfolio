@@ -7,19 +7,21 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Intro from "./components/Intro";
 import Skills from "./components/Skills";
+import Gradient from "./components/Gradient";
 
 export default function Home() {
   
   return (
     <>
-      <Header />
+      <Gradient />
+      {/* <Header />
       <Intro />
       <About />
       <Experience />
       <Skills />
       <Projects />
       <Contact />
-      <BGBackdrop />
+      <BGBackdrop /> */}
     </>
   );
 }
