@@ -1,5 +1,8 @@
 'use client'
 
+import { useActiveSelection } from '@/context/ActiveContext'
+import { useEffect } from 'react'
+import { useInView } from 'react-intersection-observer'
 import { useTypewriter, Cursor } from 'react-simple-typewriter'
 
 const Intro = () => {
@@ -9,8 +12,10 @@ const Intro = () => {
         loop: true
     })
 
+    const {activeSelection, setActiveSelection} = useActiveSelection()
+
   return (
-    <div className='h-screen text-white text-center font-bold 
+    <section className='h-screen text-white text-center font-bold 
     flex flex-col w-full items-center justify-center gap-4' id='home'>
       <div className='uppercase font-bold text-3xl'>
         Tommy vong&nbsp;
@@ -27,7 +32,7 @@ const Intro = () => {
         <button className='px-6 py-2 bg-cyan-400 rounded-md text-gray-950
         hover:bg-[#ff2d75] transition duration-300'>Contact</button>
       </div>
-    </div>
+    </section>
   )
 }
 

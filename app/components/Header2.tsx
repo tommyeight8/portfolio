@@ -25,7 +25,8 @@ const Header2 = (props: Props) => {
                     y: 0, opacity: 1
                 }}
                 className='absolute w-full h-14 bg-transparent before:absolute before:w-full 
-                before:h-[90%] shadow-lg before:bg-gray-600/10 before:backdrop-blur-md 
+                before:h-[90%] shadow-lg before:bg-transparent before:backdrop-blur-md 
+                before:border-b-[1px] before:border-gray-600/10
                 before:-z-10'>
 
                 </motion.div>
@@ -49,9 +50,9 @@ const Header2 = (props: Props) => {
                                                 onClick={() => setActiveSelection(link.name)}
                                                 href={link.hash}
                                                 className={clsx(`flex w-full items-center justify-center py-4 px-2 
-                                                hover:text-gray-50 transition duration-300`, 
+                                                hover:text-white transition duration-300`, 
                                                 {
-                                                    'text-gray-50': activeSelection === link.name
+                                                    'text-white transition duration-200': activeSelection === link.name
                                                 })}>
                                                     {link.name}
 
@@ -63,7 +64,8 @@ const Header2 = (props: Props) => {
                                                                 type: 'tween',
                                                                 stiff: '200'
                                                             }}
-                                                            className='absolute bottom-2 h-[3px] rounded-full bg-white w-[70%]'>
+                                                            className='absolute bottom-2 h-[2px] rounded-full bg-gray-200 w-[70%]
+                                                            before:h-2 before:w-full before:absolute before:bg-cyan-300/70 before:blur-md'>
                                                                 &nbsp;
                                                         </motion.span>
                                                     )
