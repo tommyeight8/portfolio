@@ -2,3 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+    .social-icons {
+        @apply text-gray-200 text-2xl hover:text-cyan-400 transition duration-200
+    }
+}

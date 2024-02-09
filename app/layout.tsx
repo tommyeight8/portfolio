@@ -4,6 +4,8 @@ import "./globals.css";
 import Header from "./components/Header";
 
 import { ActiveContextProvider } from '@/context/ActiveContext'
+import Header2 from "./components/Header2";
+import Footer from "./components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,10 +21,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className='scroll-smooth'>
-      <body className={`${inter.className} bg-[#07101f]`}>
+      <body className={`${inter.className} bg-[#07101f] relative`}>
         <ActiveContextProvider>
-          {/* <Header /> */}
-          {children}
+          <Header2 />
+          <div className="flex flex-col w-full items-center justify-center">
+            {children}
+          </div>
+          <Footer />
         </ActiveContextProvider>
       </body>
     </html>

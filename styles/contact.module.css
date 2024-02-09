@@ -1,0 +1,24 @@
+/* before:bg-gradient-to-t before:from-[#ff2d75] before:to-[#4fc3dc]
+            before:animate-[spin_15s_linear_infinite]  */
+
+@property  --a {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+
+.bg-gradient::before {
+    background: repeating-conic-gradient(from var(--a), #ff2770  0%, 
+    #ff2770 5%, transparent 0%, transparent 40%, #ff2770 50%);
+    filter: drop-shadow(0 15px 50px #000);
+    animation: animate 6s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        --a: 0deg;
+    }
+    100% {
+        --a: 360deg;
+    }
+}
