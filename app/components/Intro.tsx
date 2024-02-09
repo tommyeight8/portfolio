@@ -1,10 +1,9 @@
 'use client'
 
-import { useActiveSelection } from '@/context/ActiveContext'
-import { useEffect } from 'react'
-import { useInView } from 'react-intersection-observer'
 import { useTypewriter, Cursor } from 'react-simple-typewriter'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
+import { FaDownload, FaEnvelope } from 'react-icons/fa'
 
 const Intro = () => {
     const [text] = useTypewriter({
@@ -30,7 +29,7 @@ const Intro = () => {
           delay: .1,
           duration: .2
         }}
-        className='uppercase font-bold text-3xl'>
+        className='uppercase font-bold text-lg md:text-3xl'>
           Tommy vong&nbsp;
           <span className='text-[#ff2d75]'>
               {text}<Cursor/>
@@ -49,7 +48,7 @@ const Intro = () => {
           delay: .1,
           duration: .2
         }}
-        className='w-full max-w-[600px] font-light'>
+        className='w-full max-w-[400px] md:max-w-[600px] font-light'>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa earum enim minima quasi. Suscipit reprehenderit tenetur repellat aut consectetur
           corrupti dolores dolorum iste.
       </motion.div>
@@ -65,15 +64,18 @@ const Intro = () => {
         transition={{
           delay: .3
         }}
-        className='flex gap-2'>
-          <button className='px-6 py-2 border border-white rounded-md
-          hover:bg-white hover:text-gray-900 transition duration-300'>
-            Projects
+        className='flex gap-2 text-normal'>
+          <button className='px-4 text-sm md:text-lg md:px-6 py-2 border border-white rounded-md
+          hover:bg-white hover:text-gray-900 transition duration-300
+          flex gap-2 items-center'>
+            <FaDownload /> Resume
           </button>
-          <button className='px-6 py-2 bg-cyan-400 rounded-md text-gray-950
-          hover:bg-[#ff2d75] transition duration-300'>
-            Contact
-          </button>
+          <Link href='#contact'>
+            <button className='px-4 text-sm md:text-lg md:px-6 py-2 border-2 border-cyan-400 bg-cyan-400 rounded-md text-gray-950
+            hover:bg-[#ff2d75] hover:border-[#ff2d75] transition duration-300 flex gap-2 items-center'>
+              <FaEnvelope /> Contact
+            </button>
+          </Link>
       </motion.div>
     </motion.section>
   )

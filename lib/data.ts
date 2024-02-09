@@ -33,32 +33,67 @@ export const links = [
   },
 ] as const;
 
-// export const experiencesData = [
-//   {
-//     title: "Graduated bootcamp",
-//     location: "Miami, FL",
-//     description:
-//       "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-//     icon: React.createElement(LuGraduationCap),
-//     date: "2019",
-//   },
-//   {
-//     title: "Front-End Developer",
-//     location: "Orlando, FL",
-//     description:
-//       "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-//     icon: React.createElement(CgWorkAlt),
-//     date: "2019 - 2021",
-//   },
-//   {
-//     title: "Full-Stack Developer",
-//     location: "Houston, TX",
-//     description:
-//       "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-//     icon: React.createElement(FaReact),
-//     date: "2021 - present",
-//   },
-// ] as const;
+export const skillsData = [
+  {
+    lang: 'Html',
+    knowledge: 95,
+  },
+  {
+    lang: 'CSS',
+    knowledge: 95
+  },
+  {
+    lang: 'React Js',
+    knowledge: 90
+  },
+  {
+    lang: 'Next Js',
+    knowledge: 90
+  },
+  {
+    lang: 'Redux',
+    knowledge: 85
+  },
+  {
+    lang: 'Prisma',
+    knowledge: 88
+  },
+  {
+    lang: 'Node Js',
+    knowledge: 90
+  },
+  {
+    lang: 'MongoDB',
+    knowledge: 85
+  }
+];
+
+export const experiencesData = [
+  {
+    title: "IMI Studio",
+    location: "El monte, CA",
+    description:
+      "Working as a junior graphic designer assisting senior graphic designer finishing tasks.",
+    icon: React.createElement(LuGraduationCap),
+    date: "2019",
+  },
+  {
+    title: "Bachelor of Fine Arts ",
+    location: "Pomona, CA",
+    description:
+      "Finished four years of graphic design studies.",
+    icon: React.createElement(CgWorkAlt),
+    date: "2019 - 2021",
+  },
+  {
+    title: "Senior Graphic Designer/Web Developer",
+    location: "Los Angeles, CA",
+    description:
+      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+    icon: React.createElement(FaReact),
+    date: "2021 - present",
+  },
+] as const;
 
 // export const projectsData = [
 //   {
@@ -83,25 +118,3 @@ export const links = [
 //     imageUrl: wordanalyticsImg,
 //   },
 // ] as const;
-
-export const skillsData = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Node.js",
-  "Git",
-  "Tailwind",
-  "Prisma",
-  "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
-  "Express",
-  "PostgreSQL",
-  "Python",
-  "Django",
-  "Framer Motion",
-] as const;

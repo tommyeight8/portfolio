@@ -56,6 +56,7 @@ const Form = () => {
                         <input  
                             name="email"
                             type="email" 
+                            id='email'
                             className="text-white peer w-full border-b-2 border-transparent placeholder:text-transparent 
                             outline-none focus:border-gray-700 bg-black/10 p-2" 
                             placeholder="name" />
@@ -69,6 +70,7 @@ const Form = () => {
                     </div>
                     <div className="relative mt-6">
                         <textarea 
+                            id='message'
                             name="message"
                             maxLength={500}
                             className="text-white h-24 peer w-full border-b-2 border-transparent placeholder:text-transparent 

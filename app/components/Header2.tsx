@@ -65,7 +65,7 @@ const Header2 = (props: Props) => {
                                                                 stiff: '200'
                                                             }}
                                                             className='absolute bottom-2 h-[2px] rounded-full bg-gray-200 w-[70%]
-                                                            before:h-2 before:w-full before:absolute before:bg-cyan-300/70 before:blur-md'>
+                                                            before:h-2 before:w-full before:absolute before:bg-cyan-400/80 before:blur-md'>
                                                                 &nbsp;
                                                         </motion.span>
                                                     )

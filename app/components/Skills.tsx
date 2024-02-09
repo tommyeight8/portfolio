@@ -1,66 +1,44 @@
 'use client'
 
 import { useActiveSelection } from '@/context/ActiveContext'
-import { skillsData } from '@/lib/data'
 import Image from 'next/image'
 import React, { useEffect } from 'react'
-import { useInView } from 'react-intersection-observer'
-import { motion } from 'framer-motion'
-import { once } from 'events'
+import {motion} from 'framer-motion'
+import Progressbar from './Progressbar'
+import { skillsData } from '@/lib/data'
 
 const Skills = () => {
-  const staggerMotion = {
-    initial: {
-      opacity: 0,
-      y: 100
-    },
-    animate: (i: number) => ({
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: .05 * i
-      }
-    })
-  }
-
+  const {activeSelection, setActiveSelection} = useActiveSelection()
+  
   return (
-    <section 
-      className='h-screen w-full max-w-[900px] flex flex-col items-center justify-center text-white text-center 
-      font-bold border-t border-gray-200/10' id='skills'>
-        <div className='max-w-[640px]'>
-          <motion.h2 
-            initial={{
-              y: 100,
-              opacity: 0
-            }}
-            animate={{
-              y: 0,
-              opacity: 1
-            }}
-            transition={{
-              delay: .2
-            }}
-            whileInView='animate'
-            className='text-3xl font-medium capitalize mb-12'>My SKills</motion.h2>
-          <ul className='flex flex-wrap gap-2 justify-center items-center'>
-            { skillsData.map((skill, i) => {
-              return (
-              <motion.li
-              key={i}
-              variants={staggerMotion}
-              initial='initial'
-              whileInView='animate'
-              viewport={{
-                once: true
-              }}
-              custom={i}
-              className='text-gray-700 py-2 px-4 bg-gray-200 rounded-full'>
-                {skill}
-              </motion.li>)
-            })}
-          </ul>
+    <motion.section 
+      initial={{
+        y: 100,
+        opacity: 0
+      }}
+      whileInView={{
+        y: 0,
+        opacity: 1,
+        transition: {
+          delay: .6
+        }
+      }}
+      viewport={{
+        once: true
+      }}
+      className='w-full py-24 flex flex-col max-w-[900px] items-center justify-center text-white text-center 
+      font-bold' id='skills'>
+        <h2 className='text-3xl font-medium capitalize mb-16'>My Skills</h2>
+        <div className='px-8 grid md:grid-cols-2 gap-4 w-full'>
+          {
+            skillsData.sort((a, b) => {
+              return b.knowledge - a.knowledge
+            }).map((skill, i) => {
+              return (<Progressbar key={i} value={skill.knowledge} lang={skill.lang}/>)
+            })
+          }
         </div>
-    </section>
+    </motion.section>
   )
 }
 
