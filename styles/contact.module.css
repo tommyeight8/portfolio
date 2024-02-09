@@ -17,8 +17,12 @@
 @keyframes animate {
     0% {
         --a: 0deg;
+        -o---a: 0deg;
+        -webkit---a: 0deg;
     }
     100% {
         --a: 360deg;
+        -o---a: 360deg;
+        -webkit---a: 360deg;
     }
 }
