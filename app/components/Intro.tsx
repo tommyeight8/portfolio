@@ -39,7 +39,10 @@ const Intro = () => {
         }}
         animate={{
           y: 0,
-          opacity: 1
+          opacity: 1,
+          transition: {
+            duration: .5
+          }
         }}
       >
         <div className='uppercase font-bold text-3xl'>
@@ -61,6 +64,7 @@ const Intro = () => {
             y: 0,
             opacity: 1,
             transition: {
+              duration: .3,
               delay: .2
             }
           }}

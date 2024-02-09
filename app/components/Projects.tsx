@@ -10,7 +10,7 @@ const Projects = () => {
   return (
     <section 
       className='h-screen w-full max-w-[960px] flex flex-col items-center justify-center text-white text-center 
-      font-bold border-t border-gray-200/10' id='projects'>
+      font-bold' id='projects'>
         <h2 className='text-3xl font-medium capitalize'>Projects</h2>
         <p className='max-w-[460px] text-md font-light'>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci 

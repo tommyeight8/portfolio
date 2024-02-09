@@ -13,7 +13,7 @@ const About = () => {
   return (
     <section 
       className='py-36 w-full max-w-[960px] flex flex-col justify-center items-center text-white
-      font-bold border-t border-gray-200/10' id='about'>
+      font-bold' id='about'>
         <div className='flex gap-12'>
           <motion.div 
           initial={{
