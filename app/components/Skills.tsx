@@ -3,29 +3,42 @@
 import { useActiveSelection } from '@/context/ActiveContext'
 import Image from 'next/image'
 import React, { useEffect } from 'react'
-import { useInView } from 'react-intersection-observer'
+import {motion} from 'framer-motion'
+import Progressbar from './Progressbar'
+import { skillsData } from '@/lib/data'
 
 const Skills = () => {
   const {activeSelection, setActiveSelection} = useActiveSelection()
   
   return (
-    <section 
-      className='h-screen w-full max-w-[900px] flex flex-col items-center justify-center text-white text-center 
+    <motion.section 
+      initial={{
+        y: 100,
+        opacity: 0
+      }}
+      whileInView={{
+        y: 0,
+        opacity: 1,
+        transition: {
+          delay: .3
+        }
+      }}
+      viewport={{
+        once: true
+      }}
+      className='w-full py-24 max-w-[900px] flex flex-col items-center justify-center text-white text-center 
       font-bold border-t border-gray-200/10' id='skills'>
-        <h2 className='text-3xl font-medium capitalize'>Skills</h2>
-        <p className='max-w-[460px] text-md font-light'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci 
-          recusandae saepe, error omnis tenetur ex laboriosam laudantium quos 
-          soluta blanditiis, debitis possimus necessitatibus quae veniam 
-          cupiditate et voluptatibus similique obcaecati.
-        </p>
-        <p className='max-w-[460px] text-md font-light'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci 
-          recusandae saepe, error omnis tenetur ex laboriosam laudantium quos 
-          soluta blanditiis, debitis possimus necessitatibus quae veniam 
-          cupiditate et voluptatibus similique obcaecati.
-        </p>
-    </section>
+        <h2 className='text-3xl font-medium capitalize mb-16'>My Skills</h2>
+        <div className='grid grid-cols-2 gap-4 w-full max-[960px]:'>
+          {
+            skillsData.sort((a, b) => {
+              return b.knowledge - a.knowledge
+            }).map((skill, i) => {
+              return (<Progressbar key={i} value={skill.knowledge} lang={skill.lang}/>)
+            })
+          }
+        </div>
+    </motion.section>
   )
 }
 

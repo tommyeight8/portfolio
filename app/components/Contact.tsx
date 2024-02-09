@@ -10,7 +10,7 @@ const Contact = () => {
     
   return (
     <section 
-        className='flex items-center justify-center h-screen w-full relative bg-gradient-to-tr from-slate-800
+        className='pt-24 pb-48 flex items-center justify-center  w-full relative bg-gradient-to-tr from-slate-800
          to-[#07101f] to-50%' 
         id='contact'>
         <div className={`${styles['bg-gradient']} relative w-[300px] h-[400px] flex justify-center items-center
