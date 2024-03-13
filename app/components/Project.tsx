@@ -21,7 +21,7 @@ const Project = ({ project }: Props) => {
 
   return (
     <div
-    className='relative w-56 h-56 rounded-md object-cover 
+    className='relative w-44 h-44 md:w-56 md:h-56 rounded-md object-cover 
     cursor-pointer transition duration-200'>
        {/* <Link href={`/projects/${project._id}`}> */}
        {modal && <Modal handleClose={handleModal} project={project} />}
