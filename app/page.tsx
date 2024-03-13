@@ -18,6 +18,7 @@ export default function Home() {
       <Skills />
       <Experience />
       <Contact />
+      <BGBackdrop />
     </>
   );
 }
