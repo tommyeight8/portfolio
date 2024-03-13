@@ -3,6 +3,7 @@
 import styles from '@/styles/contact.module.css'
 import { useActiveSelection } from "@/context/ActiveContext"
 import Form from './Form'
+import Footer from './Footer'
 
 // after:bg-[url('/bg.jpg')] after:bg-cover after:bg-center after:bg-fixed 
 
@@ -10,7 +11,7 @@ const Contact = () => {
     
   return (
     <section 
-        className='pt-24 pb-48 flex items-center justify-center  w-full relative bg-gradient-to-tr from-slate-800
+        className='pt-24 pb-12 flex flex-col items-center justify-center  w-full relative bg-gradient-to-tr from-slate-800
          to-[#07101f] to-50%' 
         id='contact'>
         <div className={`${styles['bg-gradient']} relative w-[300px] h-[400px] flex justify-center items-center
@@ -23,6 +24,8 @@ const Contact = () => {
                 <Form />
             </div>
         </div>
+
+        <Footer />
     </section>
   )
 }

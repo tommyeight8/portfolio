@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "./components/Header";
 
 import { ActiveContextProvider } from '@/context/ActiveContext'
 import Header2 from "./components/Header2";
-import Footer from "./components/Footer";
+
+import toast, { Toaster } from 'react-hot-toast';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,14 +21,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className='scroll-smooth'>
-      <body className={`${inter.className} bg-[#07101f] relative`}>
-        <ActiveContextProvider>
-          <Header2 />
-          <div className="flex flex-col w-full items-center justify-center">
-            {children}
-          </div>
-          <Footer />
-        </ActiveContextProvider>
+      <body className={`${inter.className} bg-[#07101f]`}>
+          <ActiveContextProvider>
+              <Header2 />
+              <Toaster />
+              <div className="flex flex-col w-full items-center justify-center">
+                {children}
+              </div>
+            </ActiveContextProvider>
       </body>
     </html>
   );

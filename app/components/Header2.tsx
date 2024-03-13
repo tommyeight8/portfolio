@@ -48,7 +48,7 @@ const Header2 = (props: Props) => {
                                         className='flex h-12 items-center justify-center relative'>
                                             <Link 
                                                 onClick={() => setActiveSelection(link.name)}
-                                                href={link.hash}
+                                                href={`/${link.hash}`}
                                                 className={clsx(`flex w-full items-center justify-center py-4 px-2 
                                                 hover:text-white transition duration-300`, 
                                                 {

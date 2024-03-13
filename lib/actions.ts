@@ -3,7 +3,7 @@
 import { Resend } from 'resend'
 import { getErrorMessage } from './getErrorMessage'
 import { EmailSchema, EmailType } from './types'
-const resend = new Resend(process.env.RESEND_API_KEY)
+const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_API_KEY)
 
 export const sendEmail = async (formData: FormData) => {
     const senderEmail = formData.get('email')
@@ -31,8 +31,8 @@ export const sendEmail = async (formData: FormData) => {
     try {
         await resend.emails.send({
             from: 'onboarding@resend.dev',
-            to: 'tommyxlanes@gmail.com',
-            subject: 'Message from contact form',
+            to: 'tommyvong88@gmail.com',
+            subject: 'Portfolio Message',
             reply_to: senderEmail as string,
             text: message as string
         })

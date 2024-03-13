@@ -4,6 +4,7 @@ import { sendEmail } from '@/lib/actions';
 import { EmailSchema } from '@/lib/types';
 import Link from 'next/link';
 import React, { useRef, useState } from 'react'
+import toast from 'react-hot-toast';
 
 import { FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa'
 
@@ -35,6 +36,8 @@ const Form = () => {
         formRef.current?.reset()
 
         const response = await sendEmail(formData)
+
+        toast.success('We will be in touch shortly!')
 
         if(response?.error) {
             setclientErrors(response.error)
