@@ -49,8 +49,7 @@ const Intro = () => {
           duration: .2
         }}
         className='w-full max-w-[400px] md:max-w-[600px] font-light'>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa earum enim minima quasi. Suscipit reprehenderit tenetur repellat aut consectetur
-          corrupti dolores dolorum iste.
+          Graphic designer with a passion for creating innovative and trending designs. Skilful in print and digital media, as well as a great depth of knowledge in web development.
       </motion.div>
       <motion.div 
         initial={{
