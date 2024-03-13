@@ -1,5 +1,3 @@
-'use client'
-
 import { useActiveSelection } from '@/context/ActiveContext';
 import { client } from '@/lib/sanity.client';
 import Image from 'next/image';
@@ -11,7 +9,6 @@ import Link from 'next/link';
 import { Project as ProjectType } from '@/lib/types';
 
 const Projects = async () => {
-  const {activeSelection, setActiveSelection} = useActiveSelection() 
 
   const projects = await client.fetch(`
         *[_type == 'project']
@@ -31,7 +28,6 @@ const Projects = async () => {
 
         <div className='mt-8'>
           <Link
-          onClick={() => setActiveSelection('Projects')}
             className='cursor-pointer underline-offset-2 text-center text-cyan-400
             hover:text-cyan-300 font-light transition duration-200 group'
             href='/projects'

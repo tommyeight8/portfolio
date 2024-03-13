@@ -70,26 +70,34 @@ export const skillsData = [
 
 export const experiencesData = [
   {
+    title: "Bachelor of Fine Arts ",
+    location: "Pomona, CA",
+    description:
+      "Focued on graphic designs and web development",
+    icon: React.createElement(CgWorkAlt),
+    date: "2007 - 2014",
+  },
+  {
     title: "IMI Studio",
     location: "El monte, CA",
     description:
       "Working as a junior graphic designer assisting senior graphic designer finishing tasks.",
     icon: React.createElement(LuGraduationCap),
-    date: "2019",
+    date: "2013-2014",
   },
   {
-    title: "Bachelor of Fine Arts ",
-    location: "Pomona, CA",
+    title: "Junior Graphic Designer",
+    location: "Los Angeles, CA",
     description:
-      "Finished four years of graphic design studies.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+      "Work with clients on branding needs, layout, menus, as well as design websites.",
+    icon: React.createElement(FaReact),
+    date: "2015-2020",
   },
   {
     title: "Senior Graphic Designer/Web Developer",
     location: "Los Angeles, CA",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+      "Conceptualizes ideas and finished on a timely manner. Create print and digital media ads.",
     icon: React.createElement(FaReact),
     date: "2021 - present",
   },
