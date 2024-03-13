@@ -43,8 +43,8 @@ const About = () => {
               and technical proficiency to every project.
             </p>
             <Link 
-            onClick={() => setActiveSelection('Contact')}
-            href='#contact'
+            onClick={() => setActiveSelection('Projects')}
+            href='/projects'
             >
               <button className='px-6 py-2 border-2 border-cyan-400 bg-cyan-400 rounded-md text-gray-950
             hover:bg-[#ff2d75] hover:border-[#ff2d75] transition duration-300 flex gap-2 items-center'>
@@ -87,13 +87,6 @@ const About = () => {
                 after:inset-[5px] after:rounded-full`}>
               </div>
           </div>
-            {/* <Image 
-              className={`${styles.profile} relative rounded-full bg-white w-[300px] h-[300px] object-cover`}
-              src='/profile.png'
-              quality={80}
-              width={300}
-              height={300} 
-              alt='' /> */}
           </motion.div>
         </div>
     </section>

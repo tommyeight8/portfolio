@@ -8,7 +8,7 @@
       y: '0',
       opacity: 1,
       transition: {
-        duration: .1,
+        duration: .4,
         type: 'spring',
         damping: 25,
         stiffness: 500,
