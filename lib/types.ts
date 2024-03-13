@@ -1,3 +1,4 @@
+import { Reference } from 'react';
 import { TypeOf, z } from 'zod'
 
 export const EmailSchema = z.object({
@@ -8,3 +9,16 @@ export const EmailSchema = z.object({
 })
 
 export type EmailType = z.infer<typeof EmailSchema>
+
+export type Project = {
+    title: string;
+    _id: string;
+    image: {
+        _type: "image";
+        asset: {
+            _ref: string,
+            _type: Reference
+        }
+    };
+    type: string
+}

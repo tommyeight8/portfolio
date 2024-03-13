@@ -8,6 +8,7 @@ import { useInView } from 'react-intersection-observer';
 import urlFor from '@/lib/urlFor'
 import Project from './Project';
 import Link from 'next/link';
+import { Project as ProjectType } from '@/lib/types';
 
 const Projects = async () => {
   const {activeSelection, setActiveSelection} = useActiveSelection() 
@@ -23,7 +24,7 @@ const Projects = async () => {
         <h2 className='text-3xl font-medium capitalize mb-16'>Projects</h2>
         
         <div className='grid grid-cols grid-cols-2 lg:grid-cols-4 gap-4'>
-          {projects.slice(0, 10).map(project => (
+          {projects.slice(0, 10).map((project: ProjectType) => (
             <Project key={project._id} project={project}/>
           ))}
         </div>
