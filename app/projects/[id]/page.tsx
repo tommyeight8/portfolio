@@ -21,8 +21,6 @@ const page = async ({ params }: Props) => {
     *[_type == "project" && _id == "${params.id}"][0]
 `)
 
-  console.log(project)
-
   return (
     <div className='flex flex-col justify-center items-center 
     h-screen'>
