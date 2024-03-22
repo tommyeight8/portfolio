@@ -66,7 +66,7 @@ const Intro = () => {
         className='flex gap-2 text-normal'>
           <Link 
           download
-          href='./Resume2024.pdf'
+          href='./ResumeTV-2024.pdf'
           className='px-4 text-sm md:text-lg md:px-6 py-2 border border-white rounded-md
           hover:bg-white hover:text-gray-900 transition duration-300
           flex gap-2 items-center'>
